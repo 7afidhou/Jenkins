@@ -26,6 +26,7 @@ pipeline {
         stage('Run Tests') {
             steps {
                 bat 'python -m pytest tests/ --junitxml=test-results.xml'
+                
             }
         }
     }
