@@ -20,13 +20,12 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 bat 'python -m pip install -r requirements.txt'
-                bat 'pytest --version'
             }
         }
 
         stage('Run Tests') {
             steps {
-                bat 'pytest tests/'
+                bat 'python -m pytest tests/'
             }
         }
     }
